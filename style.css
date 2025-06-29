@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: aquamarine;
+    background-image: url(images/background.png);
+    background-repeat: repeat;
+}
+
+header {
+    padding-left: 20px;
+    padding-top: 20px;
+    background-color: white;
+    margin: 0px;
+    border-bottom: 5px solid #000 ;
+}
+
+.outlined-yellow {
+    color: yellow;
+    font-weight: bold;
+    text-shadow:
+    -1px -1px 0 #000,
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000;
+}
+
+.outlined-purple {
+    color: violet;
+    font-weight: bold;
+    text-shadow: 
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000;
+}
+
+.container {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+}
+
+.icon {
+    width: 20%;
+    height: auto;
+    display: block;
+    margin: auto; /* 中央寄せ（任意） */
+}
+
+.screenshot {
+    width: 100%;
+    height: auto;
+}
+
+.sc1 {
+    width: 15%;
+    height: auto;
+    margin-right: 2%;
+    margin-left: 4%;
+}
+.sc2 {
+    width: 15%;
+    height: auto;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+.sc3 {
+    width: 15%;
+    height: auto;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.sc4 {
+    width: 15%;
+    height: auto;
+    margin-right: 4%;
+    margin-left: 2%;
+}
+
+p {
+    text-align: center;
+    text-shadow: 
+    -1px -1px 0 white,
+    1px -1px 0 white,
+   -1px  1px 0 white,
+    1px  1px 0 white;
+}
+
+footer {
+    border-top: 5px solid black;
+    background-color: white;
+    margin-bottom: 0;
+}
+
+.footer_icon {
+    width: 5%;
+    aspect-ratio: 1 / 1; 
+    object-fit: contain;
+}
+
+.download {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.footer_container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    display: inline-block;
+    background-color: #00bcd4;
+    color: white;
+    font-weight: bold;
+    padding: 12px 24px;
+    margin: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* ←これを追加 */
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sc1, .sc2, .sc3, .sc4, .icon {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    .footer_container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .download {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer_icon {
+        width: 30%;
+    }
+
+    .button {
+        width: 80%;
+        text-align: center;
+    }
+}
